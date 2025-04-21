@@ -4,9 +4,8 @@
 
 
 class script(object):
-    START_TXT = """<b><blockquote>Wʜᴀᴛ's ᴜᴘ ᴄɪɴᴇᴍᴀ ʟᴏᴠᴇʀ ! {} I'ᴍ ʏᴏᴜʀ ʙᴇʟᴏᴠᴇᴅ <a href=https://t.me/{}>{}</a>.\n\nFᴀsᴛᴇɴ ʏᴏᴜʀ sᴇᴀᴛʙᴇʟᴛs! I'ᴍ ʜᴇʀᴇ ᴛᴏ ʙʀɪɴɢ ᴍᴏᴠɪᴇs ᴛᴏ ʏᴏᴜʀ Tᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴘ ғᴀsᴛᴇʀ ᴛʜᴀɴ ᴀ Hᴏʟʟʏᴡᴏᴏᴅ ᴄᴀʀ ᴄʜᴀsᴇ. Lᴇᴛ's ʀᴏʟʟ! 🚗💨>
-    
-ɪᴍ ᴛʜᴇ ᴍᴏsᴛ ᴀᴅᴠᴀɴᴄᴇ ᴀɪ ᴘᴏᴡᴇʀᴅ 🤖 ᴀᴜᴛᴏ ғɪʟᴛᴇʀ ʙᴏᴛ..
+    START_TXT = """<b><blockquote>Wʜᴀᴛ's ᴜᴘ ᴄɪɴᴇᴍᴀ ʟᴏᴠᴇʀ ! {} I'ᴍ ʏᴏᴜʀ ʙᴇʟᴏᴠᴇᴅ <a href=https://t.me/{}>{}</a>.\n\nFᴀsᴛᴇɴ ʏᴏᴜʀ sᴇᴀᴛʙᴇʟᴛs!>
+🎬Apni Pasandida Movies Aur Web Series Ka Maza Lo!🍿\nAb bina rukawat, direct download aur\nlatest content ka maza uthaiye — sirf hamari Movie Bot Membership ke sath!💯\n✅ Har Naye Movie Ka Sabse Pehle Access!\n✅Fast Download, Koi Wait Nahi\n
 sᴇɴᴅ ᴍᴇ ᴀɴʏ ᴍᴏᴠɪᴇ ᴏʀ sᴇʀɪᴇs ɴᴀᴍᴇ ᴀɴᴅ sᴇᴇ ᴍʏ ᴍᴀɢɪᴄ..✨ғᴏʀ ᴍᴏʀᴇ ᴅᴇᴛᴀɪʟs ᴜsᴇ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ 🤞🏻</b>"""
 
     HELP_TXT = """<b>𝙃𝙚𝙮 𝙎𝙤𝙣𝙖 {}
