@@ -226,10 +226,10 @@ Nᴀᴍᴇ - {}"""
 sɪᴢᴇ ⚙️: {file_size}
 •────•────✦✗✦───•────•
 📌 <b>ʀᴇǫᴜᴇsᴛ ɢʀᴏᴜᴘ :➠</b> <a href='https://t.me/+aAmjR1AgZmRlOGJl'>ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴊᴏɪɴ ✨</a>
-🎬 <b>ᴍᴏᴠɪᴇs ᴄʜᴀɴɴᴇʟ :➠</b> <a href='https://t.me/+iXwNgNXtOkk1OTVl'>ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴊᴏɪɴ ♨️</a>
+🎬 <b>ᴍᴏᴠɪᴇs ᴄʜᴀɴɴᴇʟ :➠</b> <a href='https://t.me/MOVIES_WORLDZSS'>ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴊᴏɪɴ ♨️</a>
 •────•────✦✗✦───•────•
 
-<b>©️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ :</b> <a href='https://t.me/+iXwNgNXtOkk1OTVl'>ᴘʀɪᴍᴇ ʙᴏᴛᴢ</a>
+<b>©️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ :</b> <a href='https://t.me/MOVIES_WORLDZSS'>ᴘʀɪᴍᴇ ʙᴏᴛᴢ</a>
 """
 
     IMDB_TEMPLATE_TXT = """
