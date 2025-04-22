@@ -71,7 +71,7 @@ async def start(client, message):
                 InlineKeyboardButton('🌜𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥🌛', url=CHNL_LNK)
             ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await message.reply_sticker("CAACAgUAAxkBAAKjnmfhdx-JlzqU6-fAcER1oJpEYdVWAAK4BQAC9MGxV8Xhu5F6VzQ4NgQ") 
+        m=await message.reply_sticker("CAACAgIAAxkBAAKq-GgHJKD7xCt4IjhD_bnqVl-P1GTVAAIFPQACJSZpSMuuBLfxSXn2NgQ") 
         await asyncio.sleep(1)
         await m.delete()
         await message.reply_photo(
@@ -204,7 +204,7 @@ async def start(client, message):
                     InlineKeyboardButton('🌜𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥🌛', url=CHNL_LNK)
                 ]]
             reply_markup = InlineKeyboardMarkup(buttons)
-            m=await message.reply_sticker("CAACAgUAAxkBAAEKVaxlCWGs1Ri6ti45xliLiUeweCnu4AACBAADwSQxMYnlHW4Ls8gQMAQ") 
+            m=await message.reply_sticker("CAACAgIAAxkBAAKq-GgHJKD7xCt4IjhD_bnqVl-P1GTVAAIFPQACJSZpSMuuBLfxSXn2NgQ") 
             await asyncio.sleep(1)
             await m.delete()
             await message.reply_photo(
