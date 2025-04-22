@@ -42,6 +42,12 @@ REQUEST_TO_JOIN_MODE = bool(environ.get('REQUEST_TO_JOIN_MODE', False)) # Set Tr
 TRY_AGAIN_BTN = bool(environ.get('TRY_AGAIN_BTN', False)) # Set True Or False (This try again button is only for request to join fsub not for normal fsub)
 auth_channel = environ.get('AUTH_CHANNEL', '-1002314687215') # give your force subscribe channel id here else leave it blank
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
+
+auth2_channel = environ.get('AUTH2_CHANNEL', '-1002486384026') # give your force subscribe channel id here else leave it blank
+AUTH2_CHANNEL = int(auth2_channel) if auth2_channel and id_pattern.search(auth2_channel) else None
+
+auth3_channel = environ.get('AUTH3_CHANNEL', '-1002294203953') # give your force subscribe channel id here else leave it blank
+AUTH3_CHANNEL = int(auth3_channel) if auth3_channel and id_pattern.search(auth3_channel) else None
 reqst_channel = environ.get('REQST_CHANNEL_ID', '')
 #PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1002314687215'))
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
