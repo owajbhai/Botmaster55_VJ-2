@@ -70,6 +70,8 @@ OWNER_USERNAME = environ.get('OWNER_USERNAME', 'botmaster55') # owner username w
 # Links
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/MovieSearchAutoGroup')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/MOVIES_WORLDZSS')
+CHNL2_LNK = environ.get('CHNL_LNK', 'https://t.me/MOVIES_WORLDZSS')
+CHNL3_LNK = environ.get('CHNL_LNK', 'https://t.me/MOVIES_WORLDZSS')
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/c/2046895970/314')
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '-1001937259467') # Support Chat Link Without https:// or @
 
