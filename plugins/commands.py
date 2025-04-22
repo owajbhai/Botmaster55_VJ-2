@@ -110,12 +110,12 @@ async def start(client, message):
                     btn.append([InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         if REQUEST_TO_JOIN_MODE == True:
             if TRY_AGAIN_BTN == True:
-                text = "**🕵️ Jᴏɪɴ Tʜᴇ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ Tᴏ Gᴇᴛ Mᴏᴠɪᴇ Fɪʟᴇ\n\n👨‍💻 Fɪʀsᴛ Cʟɪᴄᴋ Oɴ Jᴏɪɴ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ Bᴜᴛᴛᴏɴ, Tʜᴇɴ Cʟɪᴄᴋ Oɴ Rᴇǫᴜᴇsᴛ Tᴏ Jᴏɪɴ Bᴜᴛᴛᴏɴ Aғᴛᴇʀ Cʟɪᴄᴋ Oɴ Tʀʏ Aɢᴀɪɴ Bᴜᴛᴛᴏɴ.**"
+                text = "**🗃️ 𝐉𝐨𝐢𝐧 𝐓𝐡𝐞 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐓𝐨 𝐆𝐞𝐭 𝐌𝐨𝐯𝐢𝐞 𝐅𝐢𝐥𝐞 🗃️\n\n🔆𝐅𝐢𝐫𝐬𝐭 𝐂𝐥𝐢𝐜𝐤 𝐎𝐧 𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐁𝐮𝐭𝐭𝐨𝐧 🔆\nTʜᴇɴ Cʟɪᴄᴋ Oɴ Rᴇǫᴜᴇsᴛ Tᴏ Jᴏɪɴ Bᴜᴛᴛᴏɴ Aғᴛᴇʀ Cʟɪᴄᴋ Oɴ Tʀʏ Aɢᴀɪɴ Bᴜᴛᴛᴏɴ.**"
             else:
                 await db.set_msg_command(message.from_user.id, com=message.command[1])
-                text = "**🕵️ Jᴏɪɴ Tʜᴇ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ Tᴏ Gᴇᴛ Mᴏᴠɪᴇ Fɪʟᴇ\n\n👨‍💻 Fɪʀsᴛ Cʟɪᴄᴋ Oɴ Jᴏɪɴ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ Bᴜᴛᴛᴏɴ, Tʜᴇɴ Cʟɪᴄᴋ Oɴ Rᴇǫᴜᴇsᴛ Tᴏ Jᴏɪɴ Bᴜᴛᴛᴏɴ.**"
+                text = "**🗃️ 𝐉𝐨𝐢𝐧 𝐓𝐡𝐞 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐓𝐨 𝐆𝐞𝐭 𝐌𝐨𝐯𝐢𝐞 𝐅𝐢𝐥𝐞 🗃️\n\n🔆𝐅𝐢𝐫𝐬𝐭 𝐂𝐥𝐢𝐜𝐤 𝐎𝐧 𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐁𝐮𝐭𝐭𝐨𝐧 🔆\nTʜᴇɴ Cʟɪᴄᴋ Oɴ Rᴇǫᴜᴇsᴛ Tᴏ Jᴏɪɴ Bᴜᴛᴛᴏɴ.**"
         else:
-            text = "**🕵️ Jᴏɪɴ Tʜᴇ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ Tᴏ Gᴇᴛ Mᴏᴠɪᴇ Fɪʟᴇ\n\n👨‍💻 Fɪʀsᴛ  Cʟɪᴄᴋ Oɴ Jᴏɪɴ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ Bᴜᴛᴛᴏɴ, Tʜᴇɴ Jᴏɪɴ Cʜᴀɴɴᴇʟ Aғᴛᴇʀ Cʟɪᴄᴋ Oɴ Tʀʏ Aɢᴀɪɴ Bᴜᴛᴛᴏɴ**"
+            text = "**🗃️ 𝐉𝐨𝐢𝐧 𝐓𝐡𝐞 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐓𝐨 𝐆𝐞𝐭 𝐌𝐨𝐯𝐢𝐞 𝐅𝐢𝐥𝐞 🗃️\n\n🔆𝐅𝐢𝐫𝐬𝐭 𝐂𝐥𝐢𝐜𝐤 𝐎𝐧 𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐁𝐮𝐭𝐭𝐨𝐧 🔆\n💊𝐓𝐡𝐞𝐧 𝐉𝐨𝐢𝐧 𝐂𝐡𝐞𝐧𝐧𝐚𝐥 𝐀𝐟𝐭𝐞𝐫 𝐂𝐥𝐢𝐜𝐤 𝐎𝐧 𝐓𝐫𝐲 𝐀𝐠𝐚𝐢𝐧 𝐁𝐮𝐭𝐭𝐨𝐧💊\n\n𝐀𝐧𝐲 𝐏𝐫𝐨𝐛𝐥𝐞𝐦 𝐃𝐌👉 @Prime_Movie_Request_bot.**"
         await client.send_message(
             chat_id=message.from_user.id,
             text=text,
