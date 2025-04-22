@@ -82,22 +82,30 @@ async def start(client, message):
         )
         return
     
-    if AUTH_CHANNEL and AUTH2_CHANNEL and AUTH3_CHANNEL and not await is_subscribed(client, message):
-        try:
-            if REQUEST_TO_JOIN_MODE == True:
-                invite_link = await client.create_chat_invite_link(chat_id=(int(AUTH_CHANNEL, AUTH2_CHANNEL, AUTH3_CHANNEL)), creates_join_request=True)
-            else:
-                invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL, AUTH2_CHANNEL, AUTH3_CHANNEL))
-        except ChatAdminRequired:
-            logger.error("Make sure Bot is admin in Forcesub channel")
-            return
-        btn = [[
-            InlineKeyboardButton("🌜𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥🌛", url=invite_link.invite_link)
-        ],[
-            InlineKeyboardButton("🌜𝐉𝐨𝐢𝐧 2nd 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥🌛", url=invite_link.invite_link)
-        ],[
-            InlineKeyboardButton("🌜𝐉𝐨𝐢𝐧 3rd 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥🌛", url=invite_link.invite_link)
-        ]]
+    if (not await is_subscribed(client, message, AUTH_CHANNEL)) or \
+   (not await is_subscribed(client, message, AUTH2_CHANNEL)) or \
+   (not await is_subscribed(client, message, AUTH3_CHANNEL)):
+
+    try:
+        if REQUEST_TO_JOIN_MODE:
+            invite_link1 = await client.create_chat_invite_link(chat_id=int(AUTH_CHANNEL), creates_join_request=True)
+            invite_link2 = await client.create_chat_invite_link(chat_id=int(AUTH2_CHANNEL), creates_join_request=True)
+            invite_link3 = await client.create_chat_invite_link(chat_id=int(AUTH3_CHANNEL), creates_join_request=True)
+        else:
+            invite_link1 = await client.create_chat_invite_link(chat_id=int(AUTH_CHANNEL))
+            invite_link2 = await client.create_chat_invite_link(chat_id=int(AUTH2_CHANNEL))
+            invite_link3 = await client.create_chat_invite_link(chat_id=int(AUTH3_CHANNEL))
+    except ChatAdminRequired:
+        logger.error("Make sure Bot is admin in Forcesub channels")
+        return
+
+    btn = [[
+        InlineKeyboardButton("🌜𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥🌛", url=invite_link1.invite_link)
+    ],[
+        InlineKeyboardButton("🌜𝐉𝐨𝐢𝐧 2nd 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥🌛", url=invite_link2.invite_link)
+    ],[
+        InlineKeyboardButton("🌜𝐉𝐨𝐢𝐧 3rd 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥🌛", url=invite_link3.invite_link)
+    ]]
         if message.command[1] != "subscribe":
             if REQUEST_TO_JOIN_MODE == True:
                 if TRY_AGAIN_BTN == True:
