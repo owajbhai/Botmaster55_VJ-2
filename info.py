@@ -40,11 +40,9 @@ AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 # if REQUEST_TO_JOIN_MODE is true then force subscribe work like request to join fsub, else if false then work like normal fsub.
 REQUEST_TO_JOIN_MODE = bool(environ.get('REQUEST_TO_JOIN_MODE', False)) # Set True Or False
 TRY_AGAIN_BTN = bool(environ.get('TRY_AGAIN_BTN', False)) # Set True Or False (This try again button is only for request to join fsub not for normal fsub)
-#auth_channel = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('AUTH_CHANNEL', '-1002294203953 -1002486384026 -1002314687215').split()] # give your force subscribe channel id here else leave it blank
-#AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
-AUTH_CHANNEL = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('AUTH_CHANNEL', '-1002294203953 -1002486384026 -1002314687215').split()]
+auth_channel = environ.get('AUTH_CHANNEL', '-1002314687215') # give your force subscribe channel id here else leave it blank
+AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 reqst_channel = environ.get('REQST_CHANNEL_ID', '')
-
 #PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1002314687215'))
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 support_chat_id = environ.get('SUPPORT_CHAT_ID', '')
@@ -72,8 +70,6 @@ OWNER_USERNAME = environ.get('OWNER_USERNAME', 'botmaster55') # owner username w
 # Links
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/MovieSearchAutoGroup')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/MOVIES_WORLDZSS')
-CHNL2_LNK = environ.get('CHNL2_LNK', 'https://t.me/+vsvrmYrEVGQzOWFl')
-CHNL3_LNK = environ.get('CHNL3_LNK', 'https://t.me/+H_GDClM5eY5iN2Fl')
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/c/2046895970/314')
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '-1001937259467') # Support Chat Link Without https:// or @
 
