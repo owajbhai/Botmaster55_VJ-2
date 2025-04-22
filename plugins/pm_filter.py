@@ -2002,10 +2002,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton('🔻 ɢᴇᴛ ғʀᴇᴇ/ᴘᴀɪᴅ sᴜʙsᴄʀɪᴘᴛɪᴏɴ 🔻', callback_data='subscription')
             ],[
                 InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL_LNK)
-            ],[
-                InlineKeyboardButton('✇ Jᴏɪɴ 2nd Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL2_LNK)
-            ],[
-                InlineKeyboardButton('✇ Jᴏɪɴ 3rd Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL3_LNK)
             ]]
         else:
             buttons = [[
@@ -2018,10 +2014,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')
             ],[
                 InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL_LNK)
-            ],[
-                InlineKeyboardButton('✇ Jᴏɪɴ 2nd Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL2_LNK)
-            ],[
-                InlineKeyboardButton('✇ Jᴏɪɴ 3rd Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url=CHNL3_LNK)
             ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.edit_message_media(
