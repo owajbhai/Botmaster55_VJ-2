@@ -57,7 +57,9 @@ async def start(client, message):
                 InlineKeyboardButton('🔻 ɢᴇᴛ ғʀᴇᴇ/ᴘᴀɪᴅ sᴜʙsᴄʀɪᴘᴛɪᴏɴ 🔻', callback_data='subscription')
             ],[
                 InlineKeyboardButton('🌜𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥🌛', url=CHNL_LNK)
-            ]]
+            ],[
+            InlineKeyboardButton("⭐ 𝐌𝐨𝐯𝐢𝐞 𝐆𝐫𝐨𝐮𝐩 ⭐", url='https://t.me/+J2zehPlLqVBkMzc1')
+        ]]
         else:
             buttons = [[
                 InlineKeyboardButton('💫𝑨𝒅𝒅 𝑴𝒆 𝑻𝒐 𝒀𝒐𝒖𝒓 𝑮𝒓𝒐𝒖𝒑 💫', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
@@ -69,7 +71,9 @@ async def start(client, message):
                 InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')
             ],[
                 InlineKeyboardButton('🌜𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥🌛', url=CHNL_LNK)
-            ]]
+            ],[
+            InlineKeyboardButton("⭐ 𝐌𝐨𝐯𝐢𝐞 𝐆𝐫𝐨𝐮𝐩 ⭐", url='https://t.me/+J2zehPlLqVBkMzc1')
+        ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         m=await message.reply_sticker("CAACAgIAAxkBAAKq-GgHJKD7xCt4IjhD_bnqVl-P1GTVAAIFPQACJSZpSMuuBLfxSXn2NgQ") 
         await asyncio.sleep(1)
@@ -93,6 +97,8 @@ async def start(client, message):
             return
         btn = [[
             InlineKeyboardButton("🌜𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥🌛", url=invite_link.invite_link)
+        ],[
+            InlineKeyboardButton("⭐ 𝐌𝐨𝐯𝐢𝐞 𝐆𝐫𝐨𝐮𝐩 ⭐", url='https://t.me/+J2zehPlLqVBkMzc1')
         ]]
         if message.command[1] != "subscribe":
             if REQUEST_TO_JOIN_MODE == True:
@@ -149,7 +155,9 @@ async def start(client, message):
                 InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')
             ],[
                 InlineKeyboardButton('🌜𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥🌛', url=CHNL_LNK)
-            ]]
+            ],[
+            InlineKeyboardButton("⭐ 𝐌𝐨𝐯𝐢𝐞 𝐆𝐫𝐨𝐮𝐩 ⭐", url='https://t.me/+J2zehPlLqVBkMzc1')
+        ]]
         reply_markup = InlineKeyboardMarkup(buttons)      
         await message.reply_photo(
             photo=random.choice(PICS),
@@ -202,7 +210,9 @@ async def start(client, message):
                     InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')
                 ],[
                     InlineKeyboardButton('🌜𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥🌛', url=CHNL_LNK)
-                ]]
+                ],[
+            InlineKeyboardButton("⭐ 𝐌𝐨𝐯𝐢𝐞 𝐆𝐫𝐨𝐮𝐩 ⭐", url='https://t.me/+J2zehPlLqVBkMzc1')
+        ]]
             reply_markup = InlineKeyboardMarkup(buttons)
             m=await message.reply_sticker("CAACAgIAAxkBAAKq-GgHJKD7xCt4IjhD_bnqVl-P1GTVAAIFPQACJSZpSMuuBLfxSXn2NgQ") 
             await asyncio.sleep(1)
