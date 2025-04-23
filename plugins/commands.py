@@ -94,51 +94,68 @@ async def start(client, message):
         )
         return
     
-    if AUTH_CHANNEL and not await is_subscribed(client, message):
-        try:
-            if REQUEST_TO_JOIN_MODE == True:
-                invite_link = await client.create_chat_invite_link(chat_id=(int(AUTH_CHANNEL)), creates_join_request=True)
-            else:
-                invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
-        except ChatAdminRequired:
-            logger.error("Make sure Bot is admin in Forcesub channel")
-            return
-        btn = [[
-            InlineKeyboardButton("🌜𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥🌛", url=invite_link.invite_link)
-        ],[
-            InlineKeyboardButton("⭐ 𝐉𝐨𝐢𝐧 𝐌𝐨𝐯𝐢𝐞 𝐆𝐫𝐨𝐮𝐩 ⭐", url='https://t.me/+J2zehPlLqVBkMzc1')
-        ],[
-            InlineKeyboardButton("⚡ 𝐉𝐨𝐢𝐧 𝟐𝐧𝐝 𝐛𝐚𝐜𝐤 𝐮𝐩 ⚡", url='https://t.me/+6IJzd0ArM0QxZWRl')
-        ]]
-        if message.command[1] != "subscribe":
-            if REQUEST_TO_JOIN_MODE == True:
-                if TRY_AGAIN_BTN == True:
-                    try:
-                        kk, file_id = message.command[1].split("_", 1)
-                        btn.append([InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", callback_data=f"checksub#{kk}#{file_id}")])
-                    except (IndexError, ValueError):
-                        btn.append([InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
-            else:
-                try:
-                    kk, file_id = message.command[1].split("_", 1)
-                    btn.append([InlineKeyboardButton("🍟 𝐓𝐫𝐲 𝐀𝐠𝐚𝐢𝐧 🍟", callback_data=f"checksub#{kk}#{file_id}")])
-                except (IndexError, ValueError):
-                    btn.append([InlineKeyboardButton("🍟 𝐓𝐫𝐲 𝐀𝐠𝐚𝐢𝐧 🍟", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
-        if REQUEST_TO_JOIN_MODE == True:
-            if TRY_AGAIN_BTN == True:
-                text = "**🗃️ 𝐉𝐨𝐢𝐧 𝐓𝐡𝐞 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐓𝐨 𝐆𝐞𝐭 𝐌𝐨𝐯𝐢𝐞 𝐅𝐢𝐥𝐞 🗃️\n\n🔆𝐅𝐢𝐫𝐬𝐭 𝐂𝐥𝐢𝐜𝐤 𝐎𝐧 𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐁𝐮𝐭𝐭𝐨𝐧 🔆\nTʜᴇɴ Cʟɪᴄᴋ Oɴ Rᴇǫᴜᴇsᴛ Tᴏ Jᴏɪɴ Bᴜᴛᴛᴏɴ Aғᴛᴇʀ Cʟɪᴄᴋ Oɴ Tʀʏ Aɢᴀɪɴ Bᴜᴛᴛᴏɴ.**"
-            else:
-                await db.set_msg_command(message.from_user.id, com=message.command[1])
-                text = "**🗃️ 𝐉𝐨𝐢𝐧 𝐓𝐡𝐞 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐓𝐨 𝐆𝐞𝐭 𝐌𝐨𝐯𝐢𝐞 𝐅𝐢𝐥𝐞 🗃️\n\n🔆𝐅𝐢𝐫𝐬𝐭 𝐂𝐥𝐢𝐜𝐤 𝐎𝐧 𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐁𝐮𝐭𝐭𝐨𝐧 🔆\nTʜᴇɴ Cʟɪᴄᴋ Oɴ Rᴇǫᴜᴇsᴛ Tᴏ Jᴏɪɴ Bᴜᴛᴛᴏɴ.**"
-        else:
-            text = "**🗃️ 𝐉𝐨𝐢𝐧 𝐓𝐡𝐞 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐓𝐨 𝐆𝐞𝐭 𝐌𝐨𝐯𝐢𝐞 𝐅𝐢𝐥𝐞 🗃️\n\n🔆𝐅𝐢𝐫𝐬𝐭 𝐂𝐥𝐢𝐜𝐤 𝐎𝐧 𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐁𝐮𝐭𝐭𝐨𝐧 🔆\n💊𝐓𝐡𝐞𝐧 𝐉𝐨𝐢𝐧 𝐂𝐡𝐞𝐧𝐧𝐚𝐥 𝐀𝐟𝐭𝐞𝐫 𝐂𝐥𝐢𝐜𝐤 𝐎𝐧 𝐓𝐫𝐲 𝐀𝐠𝐚𝐢𝐧 𝐁𝐮𝐭𝐭𝐨𝐧💊\n\n𝐀𝐧𝐲 𝐏𝐫𝐨𝐛𝐥𝐞𝐦 𝐃𝐌👉 @Prime_Movie_Request_bot\n\n𝟑 𝐂𝐡𝐞𝐧𝐧𝐚𝐥 𝐏𝐡𝐚𝐥𝐞 𝐉𝐨𝐢𝐧 𝐤𝐚𝐫𝐨 👇👇.**"
-        await client.send_message(
-            chat_id=message.from_user.id,
-            text=text,
-            reply_markup=InlineKeyboardMarkup(btn),
-            parse_mode=enums.ParseMode.MARKDOWN
+btn = []
+
+if AUTH_CHANNEL and not await is_subscribed(client, message, channel_id=int(AUTH_CHANNEL)):
+    try:
+        invite_link = await client.create_chat_invite_link(
+            chat_id=int(AUTH_CHANNEL),
+            creates_join_request=REQUEST_TO_JOIN_MODE
+        )
+        btn.append([
+            InlineKeyboardButton(
+                "🌜𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥🌛",
+                url=invite_link.invite_link
             )
+        ])
+    except ChatAdminRequired:
+        logger.error("Make sure Bot is admin in AUTH_CHANNEL")
         return
+
+# EXTRA_CHANNELs check and buttons
+for i, ch in enumerate(EXTRA_CHANNEL, start=1):
+    if not await is_subscribed(client, message, channel_id=ch):
+        try:
+            extra_invite = await client.create_chat_invite_link(chat_id=ch)
+            btn.append([
+                InlineKeyboardButton(
+                    f"🔗 𝐉𝐨𝐢𝐧 𝐄𝐱𝐭𝐫𝐚 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 {i}",
+                    url=extra_invite.invite_link
+                )
+            ])
+        except ChatAdminRequired:
+            logger.error(f"Bot must be admin in EXTRA_CHANNEL: {ch}")
+            return
+
+# Only show message if user is missing subscription in any
+if btn:
+    # Try Again button
+    if message.command[1] != "subscribe":
+        try:
+            kk, file_id = message.command[1].split("_", 1)
+            btn.append([
+                InlineKeyboardButton(
+                    "↻ Tʀʏ Aɢᴀɪɴ",
+                    callback_data=f"checksub#{kk}#{file_id}"
+                )
+            ])
+        except (IndexError, ValueError):
+            btn.append([
+                InlineKeyboardButton(
+                    "↻ Tʀʏ Aɢᴀɪɴ",
+                    url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}"
+                )
+            ])
+
+    text = "**🗃️ 𝐉𝐨𝐢𝐧 𝐓𝐡𝐞 𝐌𝐢𝐬𝐬𝐢𝐧𝐠 𝐂𝐡𝐚𝐧𝐧𝐞𝐥𝐬 𝐓𝐨 𝐀𝐜𝐜𝐞𝐬𝐬 𝐓𝐡𝐞 𝐌𝐨𝐯𝐢𝐞 🗃️**"
+    
+    await client.send_message(
+        chat_id=message.from_user.id,
+        text=text,
+        reply_markup=InlineKeyboardMarkup(btn),
+        parse_mode=enums.ParseMode.MARKDOWN
+    )
+    return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         if PREMIUM_AND_REFERAL_MODE == True:
             buttons = [[
