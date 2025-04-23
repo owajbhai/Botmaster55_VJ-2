@@ -94,9 +94,9 @@ async def start(client, message):
                 invite_link1 = await client.create_chat_invite_link(chat_id=int(AUTH_CHANNEL))
                 invite_link2 = await client.create_chat_invite_link(chat_id=int(AUTH2_CHANNEL))
                 invite_link3 = await client.create_chat_invite_link(chat_id=int(AUTH3_CHANNEL))
-    except ChatAdminRequired:
-        logger.error("Make sure Bot is admin in Forcesub channels")
-        return
+        except ChatAdminRequired:
+            logger.error("Make sure Bot is admin in Forcesub channels")
+            return
 
     btn = [[
         InlineKeyboardButton("🌜𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥🌛", url=invite_link1.invite_link)
