@@ -72,7 +72,9 @@ async def start(client, message):
             ],[
                 InlineKeyboardButton('🌜𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥🌛', url=CHNL_LNK)
             ],[
-            InlineKeyboardButton("⭐ 𝐌𝐨𝐯𝐢𝐞 𝐆𝐫𝐨𝐮𝐩 ⭐", url='https://t.me/+J2zehPlLqVBkMzc1')
+            InlineKeyboardButton("⭐ 𝐉𝐨𝐢𝐧 𝐌𝐨𝐯𝐢𝐞 𝐆𝐫𝐨𝐮𝐩 ⭐", url='https://t.me/+J2zehPlLqVBkMzc1')
+        ],[
+            InlineKeyboardButton("⚡ 𝐉𝐨𝐢𝐧 𝟐𝐧𝐝 𝐛𝐚𝐜𝐤 𝐮𝐩 ⚡", url='https://t.me/+6IJzd0ArM0QxZWRl')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         m=await message.reply_sticker("CAACAgIAAxkBAAKq-GgHJKD7xCt4IjhD_bnqVl-P1GTVAAIFPQACJSZpSMuuBLfxSXn2NgQ") 
