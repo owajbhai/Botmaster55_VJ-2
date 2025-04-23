@@ -59,6 +59,16 @@ async def pub_is_subscribed(bot, query, channel):
             )
         except Exception as e:
             pass
+    
+    try:
+        await bot.get_chat_member(EXTRA_CHANNEL, query.from_user.id)
+    except UserNotParticipant:
+        btn.append(
+            [InlineKeyboardButton(f'Join Updates Channel', url=f'https://t.me/{EXTRA_CHANNEL}')]
+        )
+    except Exception as e:
+        pass
+    
     return btn
 
 async def is_subscribed(bot, query):
@@ -70,26 +80,38 @@ async def is_subscribed(bot, query):
             else:
                 try:
                     user_data = await bot.get_chat_member(AUTH_CHANNEL, query.from_user.id)
+                    try:
+                        await bot.get_chat_member(EXTRA_CHANNEL, query.from_user.id)
+                    except UserNotParticipant:
+                        pass
+                    except Exception as e:
+                        logger.exception(e)
+                    else:
+                        if user_data.status != enums.ChatMemberStatus.BANNED:
+                            return True
                 except UserNotParticipant:
                     pass
                 except Exception as e:
                     logger.exception(e)
-                else:
-                    if user_data.status != enums.ChatMemberStatus.BANNED:
-                        return True
         except Exception as e:
             logger.exception(e)
             return False
     else:
         try:
             user = await bot.get_chat_member(AUTH_CHANNEL, query.from_user.id)
+            try:
+                await bot.get_chat_member(EXTRA_CHANNEL, query.from_user.id)
+            except UserNotParticipant:
+                pass
+            except Exception as e:
+                logger.exception(e)
+            else:
+                if user.status != enums.ChatMemberStatus.BANNED:
+                    return True
         except UserNotParticipant:
             pass
         except Exception as e:
             logger.exception(e)
-        else:
-            if user.status != enums.ChatMemberStatus.BANNED:
-                return True
         return False
 
 async def get_poster(query, bulk=False, id=False, file=None):
