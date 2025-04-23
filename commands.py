@@ -31,6 +31,10 @@ async def start(client, message):
             InlineKeyboardButton('⭐ 𝐌𝐨𝐯𝐢𝐞 𝐆𝐫𝐨𝐮𝐩 ⭐', url='https://t.me/MovieSearchAutoGroup')
         ],[
             InlineKeyboardButton('🌜𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥🌛', url=CHNL_LNK)
+        ],[
+            InlineKeyboardButton("⭐ 𝐉𝐨𝐢𝐧 𝐌𝐨𝐯𝐢𝐞 𝐆𝐫𝐨𝐮𝐩 ⭐", url='https://t.me/+J2zehPlLqVBkMzc1')
+        ],[
+            InlineKeyboardButton("⚡ 𝐉𝐨𝐢𝐧 𝟐𝐧𝐝 𝐛𝐚𝐜𝐤 𝐮𝐩 ⚡", url='https://t.me/+6IJzd0ArM0QxZWRl')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup, disable_web_page_preview=True)
@@ -58,7 +62,9 @@ async def start(client, message):
             ],[
                 InlineKeyboardButton('🌜𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥🌛', url=CHNL_LNK)
             ],[
-            InlineKeyboardButton("⭐ 𝐌𝐨𝐯𝐢𝐞 𝐆𝐫𝐨𝐮𝐩 ⭐", url='https://t.me/+J2zehPlLqVBkMzc1')
+            InlineKeyboardButton("⭐ 𝐉𝐨𝐢𝐧 𝐌𝐨𝐯𝐢𝐞 𝐆𝐫𝐨𝐮𝐩 ⭐", url='https://t.me/+J2zehPlLqVBkMzc1')
+        ],[
+            InlineKeyboardButton("⚡ 𝐉𝐨𝐢𝐧 𝟐𝐧𝐝 𝐛𝐚𝐜𝐤 𝐮𝐩 ⚡", url='https://t.me/+6IJzd0ArM0QxZWRl')
         ]]
         else:
             buttons = [[
@@ -115,9 +121,9 @@ async def start(client, message):
             else:
                 try:
                     kk, file_id = message.command[1].split("_", 1)
-                    btn.append([InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", callback_data=f"checksub#{kk}#{file_id}")])
+                    btn.append([InlineKeyboardButton("🍟 𝐓𝐫𝐲 𝐀𝐠𝐚𝐢𝐧 🍟", callback_data=f"checksub#{kk}#{file_id}")])
                 except (IndexError, ValueError):
-                    btn.append([InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
+                    btn.append([InlineKeyboardButton("🍟 𝐓𝐫𝐲 𝐀𝐠𝐚𝐢𝐧 🍟", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         if REQUEST_TO_JOIN_MODE == True:
             if TRY_AGAIN_BTN == True:
                 text = "**🗃️ 𝐉𝐨𝐢𝐧 𝐓𝐡𝐞 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐓𝐨 𝐆𝐞𝐭 𝐌𝐨𝐯𝐢𝐞 𝐅𝐢𝐥𝐞 🗃️\n\n🔆𝐅𝐢𝐫𝐬𝐭 𝐂𝐥𝐢𝐜𝐤 𝐎𝐧 𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐁𝐮𝐭𝐭𝐨𝐧 🔆\nTʜᴇɴ Cʟɪᴄᴋ Oɴ Rᴇǫᴜᴇsᴛ Tᴏ Jᴏɪɴ Bᴜᴛᴛᴏɴ Aғᴛᴇʀ Cʟɪᴄᴋ Oɴ Tʀʏ Aɢᴀɪɴ Bᴜᴛᴛᴏɴ.**"
@@ -125,7 +131,7 @@ async def start(client, message):
                 await db.set_msg_command(message.from_user.id, com=message.command[1])
                 text = "**🗃️ 𝐉𝐨𝐢𝐧 𝐓𝐡𝐞 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐓𝐨 𝐆𝐞𝐭 𝐌𝐨𝐯𝐢𝐞 𝐅𝐢𝐥𝐞 🗃️\n\n🔆𝐅𝐢𝐫𝐬𝐭 𝐂𝐥𝐢𝐜𝐤 𝐎𝐧 𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐁𝐮𝐭𝐭𝐨𝐧 🔆\nTʜᴇɴ Cʟɪᴄᴋ Oɴ Rᴇǫᴜᴇsᴛ Tᴏ Jᴏɪɴ Bᴜᴛᴛᴏɴ.**"
         else:
-            text = "**🗃️ 𝐉𝐨𝐢𝐧 𝐓𝐡𝐞 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐓𝐨 𝐆𝐞𝐭 𝐌𝐨𝐯𝐢𝐞 𝐅𝐢𝐥𝐞 🗃️\n\n🔆𝐅𝐢𝐫𝐬𝐭 𝐂𝐥𝐢𝐜𝐤 𝐎𝐧 𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐁𝐮𝐭𝐭𝐨𝐧 🔆\n💊𝐓𝐡𝐞𝐧 𝐉𝐨𝐢𝐧 𝐂𝐡𝐞𝐧𝐧𝐚𝐥 𝐀𝐟𝐭𝐞𝐫 𝐂𝐥𝐢𝐜𝐤 𝐎𝐧 𝐓𝐫𝐲 𝐀𝐠𝐚𝐢𝐧 𝐁𝐮𝐭𝐭𝐨𝐧💊\n\n𝐀𝐧𝐲 𝐏𝐫𝐨𝐛𝐥𝐞𝐦 𝐃𝐌👉 @Prime_Movie_Request_bot.**"
+            text = "**🗃️ 𝐉𝐨𝐢𝐧 𝐓𝐡𝐞 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐓𝐨 𝐆𝐞𝐭 𝐌𝐨𝐯𝐢𝐞 𝐅𝐢𝐥𝐞 🗃️\n\n🔆𝐅𝐢𝐫𝐬𝐭 𝐂𝐥𝐢𝐜𝐤 𝐎𝐧 𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐁𝐮𝐭𝐭𝐨𝐧 🔆\n💊𝐓𝐡𝐞𝐧 𝐉𝐨𝐢𝐧 𝐂𝐡𝐞𝐧𝐧𝐚𝐥 𝐀𝐟𝐭𝐞𝐫 𝐂𝐥𝐢𝐜𝐤 𝐎𝐧 𝐓𝐫𝐲 𝐀𝐠𝐚𝐢𝐧 𝐁𝐮𝐭𝐭𝐨𝐧💊\n\n𝐀𝐧𝐲 𝐏𝐫𝐨𝐛𝐥𝐞𝐦 𝐃𝐌👉 @Prime_Movie_Request_bot\n\n𝟑 𝐂𝐡𝐞𝐧𝐧𝐚𝐥 𝐏𝐡𝐚𝐥𝐞 𝐉𝐨𝐢𝐧 𝐤𝐚𝐫𝐨 👇👇.**"
         await client.send_message(
             chat_id=message.from_user.id,
             text=text,
