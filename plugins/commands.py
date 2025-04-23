@@ -81,20 +81,19 @@ async def start(client, message):
             parse_mode=enums.ParseMode.HTML
         )
         return
-    
     if (not await is_subscribed(client, message, AUTH_CHANNEL)) or \
-   (not await is_subscribed(client, message, AUTH2_CHANNEL)) or \
-   (not await is_subscribed(client, message, AUTH3_CHANNEL)):
+       (not await is_subscribed(client, message, AUTH2_CHANNEL)) or \
+       (not await is_subscribed(client, message, AUTH3_CHANNEL)):
 
-    try:
-        if REQUEST_TO_JOIN_MODE:
-            invite_link1 = await client.create_chat_invite_link(chat_id=int(AUTH_CHANNEL), creates_join_request=True)
-            invite_link2 = await client.create_chat_invite_link(chat_id=int(AUTH2_CHANNEL), creates_join_request=True)
-            invite_link3 = await client.create_chat_invite_link(chat_id=int(AUTH3_CHANNEL), creates_join_request=True)
-        else:
-            invite_link1 = await client.create_chat_invite_link(chat_id=int(AUTH_CHANNEL))
-            invite_link2 = await client.create_chat_invite_link(chat_id=int(AUTH2_CHANNEL))
-            invite_link3 = await client.create_chat_invite_link(chat_id=int(AUTH3_CHANNEL))
+        try:
+            if REQUEST_TO_JOIN_MODE:
+                invite_link1 = await client.create_chat_invite_link(chat_id=int(AUTH_CHANNEL), creates_join_request=True)
+                invite_link2 = await client.create_chat_invite_link(chat_id=int(AUTH2_CHANNEL), creates_join_request=True)
+                invite_link3 = await client.create_chat_invite_link(chat_id=int(AUTH3_CHANNEL), creates_join_request=True)
+            else:
+                invite_link1 = await client.create_chat_invite_link(chat_id=int(AUTH_CHANNEL))
+                invite_link2 = await client.create_chat_invite_link(chat_id=int(AUTH2_CHANNEL))
+                invite_link3 = await client.create_chat_invite_link(chat_id=int(AUTH3_CHANNEL))
     except ChatAdminRequired:
         logger.error("Make sure Bot is admin in Forcesub channels")
         return
