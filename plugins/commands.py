@@ -31,7 +31,7 @@ async def start(client, message):
             InlineKeyboardButton('⭐ 𝐌𝐨𝐯𝐢𝐞 𝐆𝐫𝐨𝐮𝐩 ⭐', url='https://t.me/MovieSearchAutoGroup')
         ],[
             InlineKeyboardButton('🌜𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥🌛', url=CHNL_LNK),
-            [
+        ],[
                 InlineKeyboardButton('💥 𝐉𝐨𝐢𝐧 𝐆𝐫𝐨𝐮𝐩 💥', url='https://t.me/+HvkOX6x9RIJkYjZl')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -59,7 +59,7 @@ async def start(client, message):
                 InlineKeyboardButton('🔻 ɢᴇᴛ ғʀᴇᴇ/ᴘᴀɪᴅ sᴜʙsᴄʀɪᴘᴛɪᴏɴ 🔻', callback_data='subscription')
             ],[
                 InlineKeyboardButton('🌜𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥🌛', url=CHNL_LNK),
-                [
+            ],[
                 InlineKeyboardButton('💥 𝐉𝐨𝐢𝐧 𝐆𝐫𝐨𝐮𝐩 💥', url='https://t.me/+HvkOX6x9RIJkYjZl')
             ]]
         else:
@@ -73,7 +73,7 @@ async def start(client, message):
                 InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')
             ],[
                 InlineKeyboardButton('🌜𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥🌛', url=CHNL_LNK),
-                [
+            ],[
                 InlineKeyboardButton('💥 𝐉𝐨𝐢𝐧 𝐆𝐫𝐨𝐮𝐩 💥', url='https://t.me/+HvkOX6x9RIJkYjZl')
             ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -157,7 +157,7 @@ async def start(client, message):
                 InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')
             ],[
                 InlineKeyboardButton('🌜𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥🌛', url=CHNL_LNK),
-                [
+            ],[
                 InlineKeyboardButton('💥 𝐉𝐨𝐢𝐧 𝐆𝐫𝐨𝐮𝐩 💥', url='https://t.me/+HvkOX6x9RIJkYjZl')
             ]]
         reply_markup = InlineKeyboardMarkup(buttons)      
@@ -212,7 +212,7 @@ async def start(client, message):
                     InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')
                 ],[
                     InlineKeyboardButton('🌜𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥🌛', url=CHNL_LNK),
-                    [
+                ],[
                 InlineKeyboardButton('💥 𝐉𝐨𝐢𝐧 𝐆𝐫𝐨𝐮𝐩 💥', url='https://t.me/+HvkOX6x9RIJkYjZl')
                 ]]
             reply_markup = InlineKeyboardMarkup(buttons)
